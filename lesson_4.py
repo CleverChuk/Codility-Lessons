@@ -70,14 +70,7 @@ def maxCounter(N, A):
     d = defaultdict(int)
     m = 0
     mop = 0
-    maxop = len([i for i in A if i == N+1])
-    
-    for i in range(1,N+1):
-       d[i] = 0
       
-    if maxop == len(A):
-        return tuple(d.values())
-       
     for c in A:
        if c == N + 1:
            mop += m

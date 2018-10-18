@@ -89,3 +89,18 @@ def maxCounter(N, A):
     
     
     return tuple(r.values())
+
+def missingInteger(A):
+    # write your code in Python 3.6
+    A = list(filter(lambda i: i > 0, set(A)))
+    A = sorted(A)
+    n = len(A)-1
+
+    if 1 not in A:
+        return 1
+
+    for i in range(n):
+        if A[i+1] - A[i] != 1:
+            return A[i] + 1
+
+    return A[-1] + 1
